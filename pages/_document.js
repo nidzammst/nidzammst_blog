@@ -16,7 +16,7 @@ class MyDocument extends Document {
         <Head>
           <link rel='icon' href='/favicon.ico' />
           <CommonScript />
-  <Script type="text/javascript">
+  <Script
   atOptions = {
     'key': '5ee41ec68d55eb28c246664ae37e62d4',
     'format': 'iframe',
@@ -25,8 +25,7 @@ class MyDocument extends Document {
     'params': {}
   };
 />
-<Script type="text/javascript" src="//www.topcreativeformat.com/5ee41ec68d55eb28c246664ae37e62d4/invoke.js">
-/>
+<Script type="text/javascript" src="//www.topcreativeformat.com/5ee41ec68d55eb28c246664ae37e62d4/invoke.js"/>
         </Head>
 
         <body className={`${BLOG.FONT_STYLE} tracking-wider bg-day dark:bg-night`}>
