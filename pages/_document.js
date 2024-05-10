@@ -15,6 +15,7 @@ class MyDocument extends Document {
         <Head>
           <link rel='icon' href='/favicon.ico' />
           <CommonScript />
+  <meta name="monetag" content="edfc9b8a4bef2e039d1adad9954e7a80" />
         </Head>
 
         <body className={`${BLOG.FONT_STYLE} tracking-wider bg-day dark:bg-night`}>
