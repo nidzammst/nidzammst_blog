@@ -16,16 +16,19 @@ class MyDocument extends Document {
         <Head>
           <link rel='icon' href='/favicon.ico' />
           <CommonScript />
-  <Script
-  atOptions = {
-    'key': '5ee41ec68d55eb28c246664ae37e62d4',
-    'format': 'iframe',
-    'height': 600,
-    'width': 160,
-    'params': {}
-  };
-/>
-<Script src="www.topcreativeformat.com/5ee41ec68d55eb28c246664ae37e62d4/invoke.js"/>
+  <Script strategy="afterInteractive">
+  {`atOptions = {
+    'key' : '5ee41ec68d55eb28c246664ae37e62d4',
+    'format' : 'iframe',
+    'height' : 600,
+    'width' : 160,
+    'params' : {}
+  };`}
+</Script>
+  <Script 
+        src="//www.topcreativeformat.com/5ee41ec68d55eb28c246664ae37e62d4/invoke.js"
+        strategy="afterInteractive"
+      />
         </Head>
 
         <body className={`${BLOG.FONT_STYLE} tracking-wider bg-day dark:bg-night`}>
