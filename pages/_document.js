@@ -16,14 +16,8 @@ class MyDocument extends Document {
         <Head>
           <link rel="icon" href="/favicon.ico" />
           <CommonScript />
-          <Script id="ads" strategy="afterInteractive">
-            {`atOptions = {'key' : '5ee41ec68d55eb28c246664ae37e62d4', 'format' : 'iframe',
-            'height' : 600, 'width' : 160, 'params' : {}};`}
-          </Script>
-          <Script
-            src="//www.topcreativeformat.com/5ee41ec68d55eb28c246664ae37e62d4/invoke.js"
-            strategy="afterInteractive"
-          />
+          <Script src="//pl23292371.highcpmgate.com/c9/dd/b8/c9ddb866b1055a1cd466384034590267.js" />
+          <Script src="//pl23292382.highcpmgate.com/90/42/a7/9042a704693cdf40f23d6e6b5ded2b1c.js" />
         </Head>
 
         <body
