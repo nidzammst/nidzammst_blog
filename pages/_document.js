@@ -20,9 +20,16 @@ class MyDocument extends Document {
             src="//pl23292371.highcpmgate.com/c9/dd/b8/c9ddb866b1055a1cd466384034590267.js"
             strategy="beforeInteractive"
           />
-          <Script
+          {/* <Script
             src="//pl23292382.highcpmgate.com/90/42/a7/9042a704693cdf40f23d6e6b5ded2b1c.js"
             strategy="beforeInteractive"
+          /> */}
+          {/* Popunder */}
+          <Script
+            async="async"
+            data-cfasync="false"
+            strategy="beforeInteractive"
+            src="//pl23292822.highcpmgate.com/1fc27fc34489f0b73514246aeae498fc/invoke.js"
           />
         </Head>
 

@@ -109,8 +109,7 @@ const NotionPage = ({ post, className }) => {
       />
 
       <PrismMac />
-      <div id="SC_TBlock_884024"></div>
-      <div id="884024"></div>
+      <div id="container-1fc27fc34489f0b73514246aeae498fc"></div>
     </div>
   )
 }
