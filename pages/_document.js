@@ -25,7 +25,7 @@ class MyDocument extends Document {
             strategy="beforeInteractive"
           />
           <Script
-            src="'//satellitefetidtelegraph.com/c9/dd/b8/c9ddb866b1055a1cd466384034590267.js"
+            src="//satellitefetidtelegraph.com/c9/dd/b8/c9ddb866b1055a1cd466384034590267.js"
             strategy="beforeInteractive"
           />
         </Head>
