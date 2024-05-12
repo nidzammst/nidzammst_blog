@@ -26,8 +26,9 @@ class MyDocument extends Document {
           />
 
           <Script id="ads" strategy="afterInteractive">
-            (sc_adv_out = window.sc_adv_out || []).push(
-            {{ id: 884024, domain: 'n.nnowa.com' }});
+            {`
+              (sc_adv_out = window.sc_adv_out || []).push({ id: 884024, domain: 'n.nnowa.com' });
+            `}
           </Script>
           <Script
             src="//st-n.nnowa.com/js/a.js"
