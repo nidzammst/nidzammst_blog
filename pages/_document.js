@@ -16,8 +16,14 @@ class MyDocument extends Document {
         <Head>
           <link rel="icon" href="/favicon.ico" />
           <CommonScript />
-          <Script src="//pl23292371.highcpmgate.com/c9/dd/b8/c9ddb866b1055a1cd466384034590267.js" />
-          <Script src="//pl23292382.highcpmgate.com/90/42/a7/9042a704693cdf40f23d6e6b5ded2b1c.js" />
+          <Script
+            src="//pl23292371.highcpmgate.com/c9/dd/b8/c9ddb866b1055a1cd466384034590267.js"
+            strategy="afterInteractive"
+          />
+          <Script
+            src="//pl23292382.highcpmgate.com/90/42/a7/9042a704693cdf40f23d6e6b5ded2b1c.js"
+            strategy="afterInteractive"
+          />
         </Head>
 
         <body
