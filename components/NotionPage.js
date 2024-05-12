@@ -1,4 +1,3 @@
-
 import { NotionRenderer } from 'react-notion-x'
 import dynamic from 'next/dynamic'
 import mediumZoom from '@fisch0920/medium-zoom'
@@ -10,14 +9,14 @@ import 'katex/dist/katex.min.css'
 import { mapImgUrl } from '@/lib/notion/mapImage'
 
 const Equation = dynamic(() =>
-  import('@/components/Equation').then(async (m) => {
+  import('@/components/Equation').then(async m => {
     // persamaan/equation kimia
     await import('@/lib/mhchem')
     return m.Equation
   })
 )
 const Pdf = dynamic(
-  () => import('react-notion-x/build/third-party/pdf').then((m) => m.Pdf),
+  () => import('react-notion-x/build/third-party/pdf').then(m => m.Pdf),
   {
     ssr: false
   }
@@ -29,28 +28,37 @@ const PrismMac = dynamic(() => import('@/components/PrismMac'), {
   ssr: true
 })
 
-const Collection = dynamic(() =>
-  import('react-notion-x/build/third-party/collection').then((m) => m.Collection), { ssr: true }
+const Collection = dynamic(
+  () =>
+    import('react-notion-x/build/third-party/collection').then(
+      m => m.Collection
+    ),
+  { ssr: true }
 )
 
 const Modal = dynamic(
-  () => import('react-notion-x/build/third-party/modal').then((m) => m.Modal), { ssr: false }
+  () => import('react-notion-x/build/third-party/modal').then(m => m.Modal),
+  { ssr: false }
 )
 
 const NotionPage = ({ post, className }) => {
-  const zoom = isBrowser() && mediumZoom({
-    container: '.notion-viewport',
-    background: 'rgba(0, 0, 0, 0.2)',
-    scrollOffset: 200,
-    margin: getMediumZoomMargin()
-  })
+  const zoom =
+    isBrowser() &&
+    mediumZoom({
+      container: '.notion-viewport',
+      background: 'rgba(0, 0, 0, 0.2)',
+      scrollOffset: 200,
+      margin: getMediumZoomMargin()
+    })
 
   const zoomRef = React.useRef(zoom ? zoom.clone() : null)
 
   React.useEffect(() => {
     setTimeout(() => {
       if (window.location.hash) {
-        const tocNode = document.getElementById(window.location.hash.substring(1))
+        const tocNode = document.getElementById(
+          window.location.hash.substring(1)
+        )
         if (tocNode && tocNode?.className?.indexOf('notion') > -1) {
           tocNode.scrollIntoView({ block: 'start', behavior: 'smooth' })
         }
@@ -60,10 +68,12 @@ const NotionPage = ({ post, className }) => {
     setTimeout(() => {
       if (isBrowser()) {
         // Tambahkan fungsi zoom ke gambar di galeri
-        const imgList = document.querySelectorAll('.notion-collection-card-cover img')
+        const imgList = document.querySelectorAll(
+          '.notion-collection-card-cover img'
+        )
         if (imgList && zoomRef.current) {
           for (let i = 0; i < imgList.length; i++) {
-            (zoomRef.current).attach(imgList[i])
+            zoomRef.current.attach(imgList[i])
           }
         }
 
@@ -80,22 +90,28 @@ const NotionPage = ({ post, className }) => {
     return <>{post?.summary || ''}</>
   }
 
-  return <div id='container' className={`max-w-5xl font-medium mx-auto ${className}`}>
-    <NotionRenderer
-      recordMap={post.blockMap}
-      mapPageUrl={mapPageUrl}
-      mapImageUrl={mapImgUrl}
-      components={{
-        Code,
-        Collection,
-        Equation,
-        Modal,
-        Pdf
-      }} />
+  return (
+    <div
+      id="container"
+      className={`max-w-5xl font-medium mx-auto ${className}`}
+    >
+      <NotionRenderer
+        recordMap={post.blockMap}
+        mapPageUrl={mapPageUrl}
+        mapImageUrl={mapImgUrl}
+        components={{
+          Code,
+          Collection,
+          Equation,
+          Modal,
+          Pdf
+        }}
+      />
 
       <PrismMac />
-
-  </div>
+      <div id="SC_TBlock_884024"></div>
+    </div>
+  )
 }
 
 /**

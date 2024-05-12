@@ -24,6 +24,16 @@ class MyDocument extends Document {
             src="//pl23292382.highcpmgate.com/90/42/a7/9042a704693cdf40f23d6e6b5ded2b1c.js"
             strategy="afterInteractive"
           />
+
+          <Script id="ads" strategy="afterInteractive">
+            (sc_adv_out = window.sc_adv_out || []).push(
+            {{ id: 884024, domain: 'n.nnowa.com' }});
+          </Script>
+          <Script
+            src="//st-n.nnowa.com/js/a.js"
+            async
+            strategy="afterInteractive"
+          />
         </Head>
 
         <body
